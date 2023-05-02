@@ -31,10 +31,10 @@ const { createApp } = Vue
 
 function calendar(id, year, month) {  
   
-  $("table#year td").click(function(){
+  $("table.year td").click(function(){
     year = $(this).text(); 
   });
-  $("table#month td").click(function(){
+  $("table.month td").click(function(){
     
     month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];    
         

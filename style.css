@@ -6,8 +6,33 @@ body{
   display: flex;
   justify-content: center;
 }
-
+.selectMonth .month,
+.selectYear .year{
+  width: 40em;
+  text-align: center;
+  color: #ffffff
+  }
+.selectYear td,
+.selectMonth td{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: #3d84c1;
+}
+@media (max-width: 600px){  
+  #large1{
+    display:none;
+  }  
+}
+@media (min-width: 600px){  
+  #small1{
+    display:none;
+  }
+}
 @media (min-width: 1140px){
+  #small{
+    display:none;
+  }
   .container{
     display: flex;
     justify-content: center;    
@@ -37,7 +62,7 @@ body{
 }
 @media (max-width: 1140px){  
   .look-calendar {
-    width:100%;
+    width:99%;
     padding:6px;
   }  
 }
@@ -91,12 +116,6 @@ body{
   }
 
 }
-
-@media(min-width:1140px) {
-  #small{
-    display:none;
-  }
-}
 .content{
   height: 26em;
   overflow:scroll;
@@ -132,7 +151,7 @@ body{
 	background-color: #3071a9;
 }
 #calendar {
-  width: 100%;
+  width: 99%;
   height: auto;
   line-height: 1.2em;
   font-size: 15px;
@@ -182,19 +201,7 @@ body{
   color: #ff6262;
 }
 
-.selectMonth #month,
-.selectYear #year{
-  width: 40em;
-  text-align: center;
-  color: #ffffff
-  }
-.selectYear td,
-.selectMonth td{
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  background-color: #3d84c1;
-}
+
 .selectYear td:hover,
 .selectMonth td:hover{
   background-color: #3071a9;

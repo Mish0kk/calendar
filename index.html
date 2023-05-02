@@ -11,13 +11,23 @@
 <body>      
   <div id="app">
   <div v-show="selectYearVis" class="selectYear">
-    <table @click="hide" id="year">
+    <table @click="hide" id="large1" class="year">
       <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td><td>2025</td></tr><tr><td>2026</td><td>2027</td><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
-    </table>      
+    </table>     
+    <table @click="hide" id="small1" class="year">
+      <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td></tr>
+      <tr><td>2024</td><td>2025</td><td>2026</td><td>2027</td></tr>
+      <tr><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
+    </table>  
   </div>
   <div v-show="selectMonthVis"  class="selectMonth">
-    <table @click="hide1" id="month">
-      <tr><td value="0">Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td><td>Май</td><td>Июнь</td></tr><tr><td>Июль</td><td>Август</td><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>
+    <table @click="hide1" id="large1" class="month">
+      <tr><td>Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td><td>Май</td><td>Июнь</td></tr><tr><td>Июль</td><td>Август</td><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>
+    </table>
+    <table @click="hide1" id="small1" class="month">
+      <tr><td>Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td></tr>
+      <tr><td>Май</td><td>Июнь</td><td>Июль</td><td>Август</td></tr>
+      <tr><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>
     </table>
   </div>
   <div v-show="CalendarVis" class="container">    
