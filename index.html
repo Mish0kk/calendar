@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>  
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>      
+  <div id="app">
+  <div v-show="selectYearVis" class="selectYear">
+    <table @click="hide" id="year">
+      <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td><td>2025</td></tr><tr><td>2026</td><td>2027</td><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
+    </table>      
+  </div>
+  <div v-show="selectMonthVis"  class="selectMonth">
+    <table @click="hide1" id="month">
+      <tr><td value="0">Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td><td>Май</td><td>Июнь</td></tr><tr><td>Июль</td><td>Август</td><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>
+    </table>
+  </div>
+  <div v-show="CalendarVis" class="container">    
+  <div class="look-calendar">
+    <table id="calendar">
+      
+      <thead>
+      <tr>
+      <td id="large"><div id='prev' class="primary">
+            <a>‹‹ Пред</a>
+          </div>
+      <td id="small"><div id='prev' class="primary">
+        <a>‹‹</a>
+      </div>
+      <td colspan="5">      
+      <p @click="hide2" id="nazv"></p> 
+      <td id="large"><div id='next' class="primary">
+            <a>След ››</a>
+          </div>
+      <td id="small"><div id='next' class="primary">
+        <a>››</a>
+      </div>
+      <tr id='large' class="dn" ><td>Понедельник<td>Вторник<td>Среда<td>Четверг<td>Пятница<td>Суббота<td>Воскресенье
+      <tr id='small' class="dn" ><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вc
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div>
+    <div class="events">
+      <p >Платежи за 27.04.2023</p>
+      <div class="content">
+        <table id="event">  
+          <tbody>
+            <tr>
+              <td>Платеж 1</td>
+              <td>120 000</td>
+            </tr>
+            <tr>
+              <td>Платеж 2</td>
+              <td>250 000</td>
+            </tr>
+            <tr>
+              <td>Общая сумма:</td>
+              <td>370 000</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
