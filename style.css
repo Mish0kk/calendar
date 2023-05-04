@@ -1,5 +1,6 @@
 body{  
   font-family: sans-serif;
+  user-select: none;
 }
 .selectYear,
 .selectMonth{  
@@ -36,11 +37,12 @@ body{
   width: 9em;
   border-radius: 10px;
   border: solid 1px #00000015;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1); 
   margin: auto;
   cursor: pointer;
 }
 #nazv:hover{
-  background-color: #f8fff8;
+  background-color: #00000005;
 }
 @media (max-width: 600px){  
   #large1{
@@ -87,7 +89,7 @@ body{
     width: 100px;
     height: 7em;
     font-weight: 500;
-    border:1px solid #00000015;  
+    border:1px solid #00000015; 
     border-radius: 10px;
     color: #353535;
     text-align: left;
@@ -173,6 +175,9 @@ body{
 .primary:hover{
 	background-color: #3071a9;
 }
+.primary:active{
+	background-color: #316899;
+}
 #calendar {
   width: 99%;
   height: auto;
@@ -214,12 +219,14 @@ body{
   color: #ff6262;
 }
 .events p{
+  user-select: text;
   margin-top: 10px;
   font-size: 20px;  
   color: #333333;
   font-weight: 700;  
 }
 #event tbody td{
+  user-select: text;
   padding-top: 10px;
   padding-right: 30px;
   font-weight: 500; 
