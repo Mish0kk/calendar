@@ -1,5 +1,52 @@
 'use strict'
 
+let tr = 1;
+let td = 1;
+var table = '';
+var count = 0
+function back(){
+  count -= 24;
+  count1 -= 24;
+  tr = 1;
+  tr1 = 1;
+  loadYearsL();  
+  loadYearsS();
+};
+function next(){
+  tr = 1
+  tr1 = 1;
+  loadYearsL();
+  loadYearsS();
+};
+function loadYearsL(){
+  while(tr <= 2){  
+    while(td <= 6){   
+      table = document.querySelector('#large1 tbody tr:nth-child('+ tr +') td:nth-child('+ td +')'); 
+      table.innerHTML = 2012+count;
+      td ++;
+      count ++;
+    }    
+    tr ++;
+    td = 1;  
+  }  
+};
+let tr1 = 1;
+let td1 = 1;
+var table1 = '';
+var count1 = 0
+function loadYearsS(){
+  while(tr1 <= 3){  
+    while(td1 <= 4){   
+      table1 = document.querySelector('#small1 tbody tr:nth-child('+ tr1 +') td:nth-child('+ td1 +')'); 
+      table1.innerHTML = 2012+count1;
+      console.log(table1)
+      td1 ++;
+      count1 ++;
+    }    
+    tr1 ++;
+    td1 = 1;  
+  }  
+};
 const { createApp } = Vue
 
   createApp({
@@ -50,8 +97,8 @@ function calendar(id, year) {
         calendar += '<td tabindex="0" class="day" id="today">' + i;
        } else {
          calendar += '<td tabindex="0" class="day">' + i;
-         if(i == 25 && month[D.getMonth()] == "Апрель" && D.getFullYear() == "2023"){
-          calendar += '<br>' + '<p id="large" class="parag">Кол-во платежей - 10</p><p id="large" class="parag">Общая сумма -<br>1 500 000 руб</p> <div id="small" class="point">10</div>';          
+         if(i == 25 && month[D.getMonth()] == "Май" && D.getFullYear() == "2023"){
+          calendar += '<br>' + '<p id="large" class="parag">Кол-во платежей - 10</p><p id="large" class="parag">Общая сумма -<br>1 500 000 руб</p> <p tabindex="0" id="small" class="point">10</p>';          
          }; 
                  
        }
@@ -67,6 +114,9 @@ function calendar(id, year) {
 document.querySelector('#today').innerHTML = month[new Date().getMonth()];  
 $("document").ready(function() {
   $("table.month td#today").trigger('click');  
+  loadYearsL();
+  loadYearsS();
+  tr = 1;
 });
 calendar("calendar", new Date().getFullYear(), new Date().getMonth());
 
