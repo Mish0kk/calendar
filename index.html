@@ -11,18 +11,18 @@
 <body>      
   <div id="app">
   <div v-show="selectYearVis" class="selectYear">
-      <table @click="hide" id="large1" class="year">
-        <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td><td>2025</td></tr><tr><td>2026</td><td>2027</td><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
-      </table>     
-      <table @click="hide" id="small1" class="year">
-        <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td></tr>
-        <tr><td>2024</td><td>2025</td><td>2026</td><td>2027</td></tr>
-        <tr><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
-      </table>  
-      <div id="image">
-        <div onclick="back()" id="arrow-left"><img src="img/default-left.png" alt="arrow-left"></div>
-        <div onclick="next()" id="arrow-right"><img src="img/default-right.png" alt="arrow-right"></div>  
-      </div> 
+    <table @click="hide" id="large1" class="year">
+      <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td><td>2024</td><td>2025</td></tr><tr><td>2026</td><td>2027</td><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
+    </table>     
+    <table @click="hide" id="small1" class="year">
+      <tr><td>2020</td><td>2021</td><td>2022</td><td>2023</td></tr>
+      <tr><td>2024</td><td>2025</td><td>2026</td><td>2027</td></tr>
+      <tr><td>2028</td><td>2029</td><td>2030</td><td>2031</td></tr>
+    </table>
+    <div id="image">
+      <div onclick="back()" id="arrow-left"><img src="img/defolt-left.png" alt="arrow-left"></div>
+      <div onclick="next()" id="arrow-right"><img src="img/defolt-right.png" alt="arrow-right"></div>  
+    </div> 
   </div>
   <div v-show="selectMonthVis"  class="selectMonth">
     <table @click="hide1" id="large1" class="month">
@@ -31,14 +31,14 @@
     <table @click="hide1" id="small1" class="month">
       <tr><td>Январь</td><td>Февраль</td><td>Март</td><td>Апрель</td></tr>
       <tr><td>Май</td><td>Июнь</td><td>Июль</td><td>Август</td></tr>
-      <tr><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td><td id="today" style="display: none">Май</td></tr>
+      <tr><td>Сентябрь</td><td>Октябрь</td><td>Ноябрь</td><td>Декабрь</td></tr>
     </table>
   </div>
   <div v-show="CalendarVis" class="container">    
   <div class="look-calendar">
     <table id="calendar">
       
-      <thead>
+      <thead id="nav-bar">
       <tr>
       <td id="large"><div id='prev' class="primary">
             <a>‹‹ Пред</a>
@@ -57,41 +57,20 @@
       <tr id='large' class="dn" ><td>Понедельник<td>Вторник<td>Среда<td>Четверг<td>Пятница<td>Суббота<td>Воскресенье
       <tr id='small' class="dn" ><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вc
       </thead>
-      <tbody></tbody>
+      <tbody id="days-table"></tbody>
     </table>
     </div>
     <div class="events">
       <p >Платежи за 27.04.2023</p>
       <div class="content">
-        <ul id="event">  
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-          <li>Платеж </li>
-        </ul>
-
+        <ul id="event"></ul>
       </div>
     </div>
   </div>
 </div>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="script.js"></script>
+  <script src="dateSelector.js"></script>
+  <!-- <script src="script.js"></script> -->
 </body>
 </html>
